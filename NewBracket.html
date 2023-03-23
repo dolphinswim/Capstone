@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Bracket</title>
+</head>
+<link rel="stylesheet" href="Bracket.css" />
+
+
+
+
+<body>
+<p> Welcome to March CS Madness:</p>
+<h4>2023 Mens College Baketball Tournement</h4>
+
+<div>
+   <fieldset style="border-style: solid">
+ <label for="Teams"> <b>SELECT TEAM FOR STATS</b></label>
+
+  <select onchange="checkAlert(event)">
+  <option value="" selected disabled hidden>Choose Here</option>
+  <option value="Alabama">Alabama</option>
+  <option value="Houston">Houston</option>
+  <option value="Kansas">Kansas</option>
+  <option value="Purdue">Purdue</option>
+  <option value="UCLA">UCLA</option>
+  <option value="Texas">Texas</option>
+  <option value="Arizona">Arizona</option>
+  <option value="Marquette">Marquette</option>
+  <option value="Baylor">Baylor</option>
+  <option value="Gonzaga">Gonzaga</option>
+  <option value="Kansas St">Kansas St</option>
+  <option value="Xavier">Xavier</option>
+  <option value="UCONN">UCONN</option>
+  <option value="Tennesse">Tennesse</option>
+  <option value="Indiana">Indiana</option>
+  <option value="Virginia">Virginia</option>
+  <option value="San Diego St">San Diego St</option>
+  <option value="Duke">Duke</option>
+  <option value="Saint Marys">Saint Marys</option>
+  <option value="Miami">Miami</option>
+  <option value="Iowas St">Iowa St</option>
+  <option value="Creighton">Creighton</option>
+  <option value="Kentucky">Kentucky</option>
+  <option value="TCU">TCU</option>
+  <option value="Texas A&M">Texas A&M</option>
+  <option value="Michigan St">Michigan St</option>
+  <option value="Missouri">Missouri</option>
+  <option value="Northwestern">Northwestern</option>
+  <option value="Memphis">Memphis</option>
+  <option value="Arkansas">Arkansas</option>
+  <option value="Maryland">Maryland</option>
+  <option value="Iowa">Iowa</option>
+  <option value="Fla Atlantic">Fla Atlantic</option>
+  <option value="West Virginia">West Virginia</option>
+  <option value="Auburn">Auburn</option>
+  <option value="Illinois">Illinois</option>
+  <option value="Boise St">Boise St</option>
+  <option value="Penn St">Penn State</option>
+  <option value="USC">USC</option>
+  <option value="Utah St">Utah St</option>
+  <option value="NC State">NC State</option>
+  <option value="Providence">Providence</option>
+  <option value="Mississippi">Mississippi</option>
+  <option value="Pittsburgh">Pittsburgh</option>
+  <option value="Arizona St">Arizona St</option>
+  <option value="Nevada">Nevada</option>
+  <option value="Charleston">Charleston</option>
+  <option value="ORU">ORU</option>
+  <option value="Drake">Drake</option>
+  <option value="VCU">VCU</option>
+  <option value="Kent St">Kent St</option>
+  <option value="Iona">Iona</option>
+  <option value="Furman">Furman</option>
+  <option value="Louisiana">Lousiana</option>
+  <option value="Kennesaw">Kennesaw</option>
+  <option value="Santa Barbara">Santa Barbara</option>
+  <option value="Grand Canyon">Grand Canyon</option>
+  <option value="Monatana St">Montana St</option>
+  <option value="Vermont">Vermont</option>
+  <option value="UNC Ashville">UNC Ashville</option>
+  <option value="FDU">FDU</option>
+  <option value="Howard">Howard</option>
+  <option value="N Kentucky">N Kentucky</option>
+  <option value="Texas A&M CC">Texas A&M CC</option>
+
+
+</select>
+
+</fieldset>
+</div>
+<br />
+
+
+
+<div class="container">
+
+   <button type="button" onClick ="trySomething()">Populate Bracket</button>
+
+  <button type="button" id="one" onClick="roundOne(); round_One(); r_One(); ro_One();rou_One();roun_One(); cat(); dog();mouse();toad(); won();wan();
+    m(); ma(); man(); mon(); win();wen(); w();wo(); water(); fall(); spring(); winter(); may(); june(); july(); august(); not(); ok(); tall(); by()">
+
+
+  Round1
+  </button>
+   <button type="button" id="two" onClick="wild(); animal(); tiger(); lep(); leap(); log(); long(); like(); law(); lamb(); lame(); lad(); rad(); fad();
+    sad(); crab()">
+
+   Round 2</button>
+
+
+  <button type="button" id="three" onClick="moose();three();four(); five(); six(); seven(); eight(); nine()">
+   Round 3</button>
+
+  <button type="button" id="four" onClick="ghost(); most(); more(); roundFour()">
+
+  Round 4</button>
+
+  <button type="button" id="five" onClick="roundFive(); scoobie()">
+    Round 5</button>
+
+
+   <button type="button" id="six" onClick="roundSixth()">
+    Round 6</button>
+    <button type="button" id="clearbracket" onClick="clearbracket()">
+        Restart</button>
+  
+
+
+
+
+   <h4>-- Round 1 ------------- Round 2 ------------- Sweet 16 ------------- Elite 8 ------------- Final 4 -------------- Championship -------------- Final 4 ------------- Elite 8 -------------- Sweet 16 --------------- Round 2 ------------ Round 1</h4><br />
+
+
+
+    <div class="even">
+
+        <div class="column">   <!--left side round 1-->
+            <input text="text" id="output" size="15" value ="1 Seed" /> <br />
+            <input text="text" id="SixtyFourSeed" size="15" value ="64 Seed" /><br />
+            <input text="text" id="TwoSeed" size="15" value ="2 Seed" /> <br /> 
+            <input text="text" id="SixtyThreeSeed" size="15" value ="63 Seed" /><br />
+            <input text="text" id="ThreeSeed" size="15" value ="3 Seed" /> <br />
+            <input text="text" id="SixtyTwoSeed" size="15" value ="62 Seed" /><br />
+            <input text="text" id="FourSeed" size="15" value ="4 Seed" /><br />
+            <input text="text" id="SixtyOneSeed" size="15" value ="61 seed" /><br />
+            <input text="text" id="FiveSeed" size="15" value ="5 Seed" /> <br />
+            <input text="text" id="SixtySeed" size="15" value ="60 Seed" /><br />
+            <input text="text" id="SixSeed" size="15" value ="6 Seed" /> <br />
+            <input text="text" id="FiftyNineSeed" size="15" value ="59 Seed" /><br />
+            <input text="text" id="SevenSeed" size="15" value ="7 Seed" /> <br />
+            <input text="text" id="FiftyEightSeed" size="15" value ="58 Seed" /><br />
+            <input text="text" id="EightSeed" size="15" value ="8 Seed" /> <br />
+            <input text="text" id="FiftySevenSeed" size="15" value ="57 Seed" /><br />
+            <input text="text" id="NineSeed" size="15" value ="9 Seed" /><br />
+            <input text="text" id="FiftySixSeed" size="15" value ="56 Seed" /><br />
+            <input text="text" id="TenSeed" size="15" value ="10 Seed" /><br />
+            <input text="text" id="FiftyFiveSeed" size="15" value ="55 Seed" /><br />
+            <input text="text" id="ElevenSeed" size="15" value ="11 Seed" /><br />
+            <input text="text" id="FiftyFourSeed" size="15" value ="54 Seed" /><br />
+            <input text="text" id="TwelveSeed" size="15" value ="12 Seed" /> <br />
+            <input text="text" id="FiftyThreeSeed" size="15" value ="53 Seed" /><br />
+            <input text="text" id="ThirteenSeed" size="15" value ="13 Seed" /><br />
+            <input text="text" id="FiftyTwoSeed" size="15" value ="52 Seed" /><br />
+            <input text="text" id="FourteenSeed" size="15" value ="14 Seed" /><br />
+            <input text="text" id="FiftyOneSeed" size="15" value ="51 Seed" /><br />
+            <input text="text" id="FifteenSeed" size="15" value ="15 Seed" /><br />
+            <input text="text" id="FiftySeed" size="15" value ="50 Seed" /><br />
+            <input text="text" id="SixteenSeed" size="15" value ="16 Seed" /><br />
+            <input text="text" id="FortyNineSeed" size="15" value ="49 Seed" /><br />
+
+
+
+        </div>
+         <div class="column">   <!-- left side round 2 -->
+
+             <br />
+             
+             <input text="text" id="TwoOne" size="15" value ="TBA" /> <br /><br /> 
+             <input text="text" id="TwoTwo" size="15" value ="TBA" /> <br /><br /> 
+             <input text="text" id="TwoThree" size="15" value ="TBA" /> <br /> <br /> 
+             <input text="text" id="TwoFour" size="15" value ="TBA" /> <br /> <br /> 
+             <input text="text" id="TwoFive" size="15" value ="TBA" /> <br /> <br /> 
+             <input text="text" id="TwoSix" size="15" value ="TBA" /> <br /> <br /> 
+             <input text="text" id="TwoSeven" size="15" value ="TBA" /> <br /> <br />
+             <input text="text" id="TwoEight" size="15" value ="TBA" /> <br /> <br /> <br/>
+             <input text="text" id="TwoNine" size="15" value ="TBA" /> <br /> <br /> 
+             <input text="text" id="TwoTen" size="15" value ="TBA" /> <br /> <br /> 
+             <input text="text" id="TwoEleven" size="15" value ="TBA" /> <br /> <br /> 
+             <input text="text" id="TwoTwelve" size="15" value ="TBA" /> <br /><br /> 
+             <input text="text" id="TwoThirteen" size="15" value ="TBA" /> <br /><br /> 
+             <input text="text" id="TwoFourteen" size="15" value ="TBA" /> <br /><br />      
+             <input text="text" id="TwoFifteen" size="15" value ="TBA" /> <br /><br /> 
+             <input text="text" id="TwoSixteen" size="15" value ="TBA" /> <br /><br /> 
+             
+             <br />
+
+
+
+        </div>
+         <div class="column">   <!-- left side sweet 16 -->
+             <br />
+             <br />
+             <br/>
+             <br />
+             <br />
+             <br/>
+             <br/>
+             <input text="text" id="ThreeOne" size="15" value ="TBA" /> <br /> <br /> <br/> 
+             <input text="text" id="ThreeTwo" size="15" value ="TBA" />  <br /> <br /> <br/>
+             <input text="text" id="ThreeThree" size="15" value ="TBA" /> <br /><br /> <br/> 
+             <input text="text" id="ThreeFour" size="15" value ="TBA" /> <br /> <br /> <br/>
+             <input text="text" id="ThreeFive" size="15" value ="TBA" /> <br /> <br /> <br/>
+             <input text="text" id="ThreeSix" size="15" value ="TBA" /> <br /> <br /> <br/>
+             <input text="text" id="ThreeSeven" size="15" value ="TBA" /> <br /> <br /><br/>
+             <input text="text" id="ThreeEight" size="15" value ="TBA" /> <br /> <br /> <br/>
+             
+             
+             <br />
+             <br />
+
+        </div>
+
+         <div class="column">   <!-- left side elite 8 -->
+             <br />
+             <br />
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br />
+             <br/>
+             <br/>
+             <br/>
+             <input text="text" id="FourOne" size="15" value ="TBA" /> <br /> <br /> <br/>
+             <input text="text" id="FourTwo" size="15" value ="TBA" /> <br /> <br /> <br/>
+             <input text="text" id="FourThree" size="15" value ="TBA" /> <br /> <br /> <br/>
+             <input text="text" id="FourFour" size="15" value ="TBA" /> <br /> <br /> <br/>
+             <br />
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br />
+             <br />
+
+        </div>
+
+         <div class="column">   <!-- left side final four-->
+             <br />
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br />
+             <br/>
+             <input text="text" id="FiveOne" size="15" value ="TBA" /><br /> <br/><br/>
+             <input text="text" id="FiveTwo" size="15" value ="TBA" />
+             <br />
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br />
+        </div>
+
+         <div class="column">   <!-- finals with champ box -->
+              <br />
+             <br />
+             <br />
+             <br />  2023 CHAMPION
+             <br /><input text="text" id="Champion" size="15" value ="TBA" /> 
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br />
+             <input text="text" id="SixOne" size="15" value ="TBA" /> <br /><br/><br/>
+             <br /><br/><br/>
+             <input text="text" id="SixTwo" size="15" value ="TBA" /> 
+              <br />
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br />
+        </div>
+
+         <div class="column">   <!-- right side final four-->
+            <br />
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br/>
+             <br />
+             <input text="text" id="FiveThree" size="15" value ="TBA" /> <br /><br/>
+             <input text="text" id="FiveFour" size="15" value ="TBA" />
+             <br />
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br /> 
+             <br />
+             <br />
+             <br />
+        </div>
+         <div class="column">   <!--right side elite 8-->
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br/>
+             <br/>
+             <br/>
+             <input text="text" id="FourFive" size="15" value ="TBA" /> <br /><br /><br/>
+             <input text="text" id="FourSix" size="15" value ="TBA" /> <br /> <br /><br/>
+             <input text="text" id="FourSeven" size="15" value ="TBA" /> <br /> <br /><br/>
+             <input text="text" id="FourEight" size="15" value ="TBA" /> <br /> <br /><br/>
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+             <br />
+
+        </div>
+
+         <div class="column">   <!-- right side sweet 16 -->
+             <br />
+             <br />
+             <br />
+             <br />
+             <br/>
+             <br/>
+             <br/>
+             <input text="text" id="ThreeNine" size="15" value ="TBA" />  <br /> <br /><br/>
+             <input text="text" id="ThreeTen" size="15" value ="TBA" />  <br /> <br /><br/>
+             <input text="text" id="ThreeEleven" size="15" value ="TBA" />  <br /> <br /><br/>
+             <input text="text" id="ThreeTwelve" size="15" value ="TBA" />  <br /> <br /><br/>
+             <input text="text" id="ThreeThirteen" size="15" value ="TBA" /> <br /> <br /><br/>
+             <input text="text" id="ThreeFourteen" size="15" value ="TBA" /> <br /> <br /><br/>
+             <input text="text" id="ThreeFifteen" size="15" value ="TBA" />  <br /> <br /><br/>
+             <input text="text" id="ThreeSixteen" size="15" value ="TBA" />  <br /> <br /><br/>
+             <br />
+             <br />
+             <br />
+             <br />
+
+        </div>
+
+         <div class="column">  <!-- right side round 2 -->
+             <br />
+             
+             <input text="text" id="TwoSeventeen" size="15" value ="TBA" /><br /><br />
+             <input text="text" id="TwoEighteen" size="15" value ="TBA" /><br /><br />
+             <input text="text" id="TwoNineteen" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoTwenty" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoTwentyOne" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoTwentyTwo" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoTwentyThree" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoTwentyFour" size="15" value ="TBA" /><br /> <br /><br/>
+             <input text="text" id="TwoTwentyFive" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoTwentySix" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoTwentySeven" size="15" value ="TBA" /><br /> <br /> 
+             <input text="text" id="TwoTwentyEight" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoTwentyNine" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoThirty" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoThirtyOne" size="15" value ="TBA" /><br /> <br />
+             <input text="text" id="TwoThirtyTwo" size="15" value ="TBA" /><br /> <br />
+             
+             <br />
+
+        </div>
+
+         <div class="column">   <!--right side rounfd 1-->
+             <input text="text" id="SeventeenSeed" size="15" value ="17 Seed" /> <br />
+             <input text="text" id="FortyEightSeed" size="15" value ="48 Seed" /><br />
+             <input text="text" id="EighteenSeed" size="15" value ="18 Seed" /> <br />
+             <input text="text" id="FortySevenSeed" size="15" value ="47 Seed" /><br />
+             <input text="text" id="NineteenSeed" size="15" value ="19 Seed" /><br />
+             <input text="text" id="FortySixSeed" size="15" value ="46 Seed" /><br />
+             <input text="text" id="TwentySeed" size="15" value ="20 Seed" /><br />
+             <input text="text" id="FortyFiveSeed" size="15" value ="45 Seed" /><br />
+             <input text="text" id="TwentyOneSeed" size="15" value ="21 Seed" /><br />
+             <input text="text" id="FortyFourSeed" size="15" value ="44 Seed" /><br />
+             <input text="text" id="TwentyTwoSeed" size="15" value ="22 Seed" /><br />
+             <input text="text" id="FortyThreeSeed" size="15" value ="43 Seed" /><br />
+             <input text="text" id="TwentyThreeSeed" size="15" value ="23 Seed" /><br />
+             <input text="text" id="FortyTwoSeed" size="15" value ="42 Seed" /><br />
+             <input text="text" id="TwentyFourSeed" size="15" value ="24 Seed" /><br />
+             <input text="text" id="FortyOneSeed" size="15" value ="41 Seed" /><br />            
+             <input text="text" id="TwentyFiveSeed" size="15" value ="25 Seed" /><br />
+             <input text="text" id="FortySeed" size="15" value ="40 Seed" /><br />
+             <input text="text" id="TwentySixSeed" size="15" value ="26 Seed" /><br />
+             <input text="text" id="ThirtyNineSeed" size="15" value ="39 Seed" /><br />
+             <input text="text" id="TwentySevenSeed" size="15" value ="27 Seed" /><br />
+             <input text="text" id="ThirtyEightSeed" size="15" value ="38 Seed" /><br />
+             <input text="text" id="TwentyEightSeed" size="15" value ="28 Seed" /><br />
+             <input text="text" id="ThirtySevenSeed" size="15" value ="37 Seed" /><br />
+             <input text="text" id="TwentyNineSeed" size="15" value ="29 Seed" /><br />
+             <input text="text" id="ThirtySixSeed" size="15" value ="36 Seed" /><br />
+             <input text="text" id="ThirtySeed" size="15" value ="30 Seed" /><br />
+             <input text="text" id="ThirtyFiveSeed" size="15" value ="35 Seed" /><br />
+             <input text="text" id="ThirtyOneSeed" size="15" value ="31 Seed" /><br />
+             <input text="text" id="ThirtyFourSeed" size="15" value ="34 Seed" /><br />
+             <input text="text" id="ThirtyTwoSeed" size= "15" value ="32 Seed" /><br />
+             <input text="text" id="ThirtyThreeSeed" size="15" value ="33 Seed" /><br />
+
+
+
+        </div>
+
+       
+        
+        <script type ="text/javascript" src="NewBracket.js"></script>
+    </div>
+    
+</div>
+
+
+
+
+
+
+</body>
+</html>

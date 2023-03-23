@@ -1,0 +1,14 @@
+  body {
+    background-color: blueviolet;
+  }
+  p {
+    font: bold 20px arial, verdana;
+  }
+  .even {
+      display: flex;
+      
+  }
+  .even > * {
+    flex-basis: 100%;
+  }
+
